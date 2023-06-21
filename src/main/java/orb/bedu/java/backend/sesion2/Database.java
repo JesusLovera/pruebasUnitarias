@@ -27,5 +27,21 @@ public class Database {
     public void clear(){
         db.clear();
     }
+    public void updateProductName(Long productId, String newName) {
+        for (Product product : db) {
+            if (product.getId() == productId) {
+                product.setName(newName);
+                break;
+            }
+        }
+    }
+    public void removeProduct(Long productId) {
+        for (Product product : db) {
+            if (product.getId() == productId) {
+                db.remove(product);
+                break;
+            }
+        }
+    }
 
 }
