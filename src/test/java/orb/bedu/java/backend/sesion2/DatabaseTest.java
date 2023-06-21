@@ -40,7 +40,7 @@ class DatabaseTest {
 
         Product p = database.getById(3L);
 
-        assertEquals(p.getId(), 3);
+        assertEquals(p.getId(), 3L);
         assertEquals(p.getName(), "Mordisko");
     }
 
